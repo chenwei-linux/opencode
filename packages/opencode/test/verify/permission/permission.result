@@ -1,0 +1,40 @@
+=== Permission Verification Test Results ===
+Test Suite: permission
+
+Test: explore_bash_denied
+Status: PASS
+Description: Verify explore agent bash permission is denied
+Expected: bash action = deny
+Actual: bash action = deny
+Conclusion: ✓符合预期
+
+Test: build_edit_denied
+Status: PASS
+Description: Verify build agent edit/write permissions are denied
+Expected: edit action = deny, write action = deny
+Actual: edit action = deny, write action = deny
+Conclusion: ✓符合预期
+
+Test: general_edit_denied
+Status: PASS
+Description: Verify general agent edit/write permissions are denied
+Expected: edit action = deny, write action = deny
+Actual: edit action = deny, write action = deny
+Conclusion: ✓符合预期
+
+Test: sysops_unchanged
+Status: PASS
+Description: Verify sysops agent keeps original capabilities
+Expected: bash=allow, read=allow, grep=allow
+Actual: bash=allow, read=allow, grep=allow
+Conclusion: ✓符合预期
+
+Test: explore_query_allowed
+Status: PASS
+Description: Verify explore agent query permissions remain
+Expected: grep=allow, glob=allow, read=allow, websearch=allow
+Actual: grep=allow, glob=allow, read=allow, websearch=allow
+Conclusion: ✓符合预期
+
+Summary: 5/5 tests passed
+Date: 2026-03-08
