@@ -13,6 +13,7 @@ import PROMPT_COMPACTION from "./prompt/compaction.txt"
 import PROMPT_EXPLORE from "./prompt/explore.txt"
 import PROMPT_SUMMARY from "./prompt/summary.txt"
 import PROMPT_TITLE from "./prompt/title.txt"
+import PROMPT_SYSOPS from "./prompt/sysops.txt"
 import { PermissionNext } from "@/permission/next"
 import { mergeDeep, pipe, sortBy, values } from "remeda"
 import { Global } from "@/global"
@@ -154,6 +155,33 @@ export namespace Agent {
         mode: "subagent",
         native: true,
       },
+      sysops: (() => {
+        console.log("【超聚变运维智能体】 sysops agent registered")
+        return {
+          name: "sysops",
+          description:
+            "Linux system operations agent for diagnostics, performance tuning, security hardening, and fault resolution. Handles non-code operational tasks.",
+          prompt: PROMPT_SYSOPS,
+          permission: PermissionNext.merge(
+            defaults,
+            PermissionNext.fromConfig({
+              question: "allow",
+              bash: "allow",
+              read: "allow",
+              grep: "allow",
+              glob: "allow",
+              list: "allow",
+              edit: "deny",
+              webfetch: "allow",
+              websearch: "allow",
+            }),
+            user,
+          ),
+          options: {},
+          mode: "primary",
+          native: true,
+        }
+      })(),
       compaction: {
         name: "compaction",
         mode: "primary",
