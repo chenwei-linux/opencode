@@ -1,0 +1,75 @@
+=== Functional Verification Test Results ===
+Test Suite: functional
+
+Test: build_functional - bash commands
+Status: PASS
+Description: Verify build agent can execute bash commands
+Expected: bash action = allow
+Actual: bash action = allow
+Conclusion: ✓符合预期
+
+Test: build_functional - read files
+Status: PASS
+Description: Verify build agent can read files
+Expected: read action = allow
+Actual: read action = allow
+Conclusion: ✓符合预期
+
+Test: build_functional - cannot edit
+Status: PASS
+Description: Verify build agent cannot edit files
+Expected: edit action = deny
+Actual: edit action = deny
+Conclusion: ✓符合预期
+
+Test: sysops_functional - system commands
+Status: PASS
+Description: Verify sysops agent can execute system commands
+Expected: bash action = allow
+Actual: bash action = allow
+Conclusion: ✓符合预期
+
+Test: sysops_functional - read files
+Status: PASS
+Description: Verify sysops agent can read files
+Expected: read action = allow
+Actual: read action = allow
+Conclusion: ✓符合预期
+
+Test: sysops_functional - search code
+Status: PASS
+Description: Verify sysops agent can search code
+Expected: grep action = allow
+Actual: grep action = allow
+Conclusion: ✓符合预期
+
+Test: sysops_functional - cannot edit
+Status: PASS
+Description: Verify sysops agent cannot edit files
+Expected: edit action = deny
+Actual: edit action = deny
+Conclusion: ✓符合预期
+
+Test: plan_functional - read files
+Status: PASS
+Description: Verify plan agent can read files
+Expected: read action = allow
+Actual: read action = allow
+Conclusion: ✓符合预期
+
+Test: plan_functional - cannot edit regular files
+Status: PASS
+Description: Verify plan agent cannot edit regular files
+Expected: edit action = deny
+Actual: edit action = deny
+Conclusion: ✓符合预期
+
+Test: plan_functional - can edit plans
+Status: PASS
+Description: Verify plan agent can edit .opencode/plans files
+Expected: edit action = allow
+Actual: edit action = allow
+Conclusion: ✓符合预期
+
+Summary: 10/10 tests passed
+Date: 2026-03-08
