@@ -38,7 +38,7 @@ test("build agent has correct default properties", async () => {
       expect(build).toBeDefined()
       expect(build?.mode).toBe("primary")
       expect(build?.native).toBe(true)
-      expect(evalPerm(build, "edit")).toBe("allow")
+      expect(evalPerm(build, "edit")).toBe("deny")
       expect(evalPerm(build, "bash")).toBe("allow")
     },
   })
@@ -218,7 +218,7 @@ test("agent permission config merges with defaults", async () => {
       // Specific pattern is denied
       expect(PermissionNext.evaluate("bash", "rm -rf *", build!.permission).action).toBe("deny")
       // Edit still allowed
-      expect(evalPerm(build, "edit")).toBe("allow")
+      expect(evalPerm(build, "edit")).toBe("deny")
     },
   })
 })
@@ -676,6 +676,7 @@ test("defaultAgent throws when all primary agents are disabled", async () => {
       agent: {
         build: { disable: true },
         plan: { disable: true },
+        sysops: { disable: true },
       },
     },
   })
