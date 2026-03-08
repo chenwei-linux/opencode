@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a73e8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d47a1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="text" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e3f2fd;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#bg)"/>
+  
+  <!-- Terminal symbol -->
+  <rect x="14" y="16" width="36" height="28" rx="4" ry="4" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  
+  <!-- Terminal header dots -->
+  <circle cx="20" cy="22" r="2.5" fill="#ff5f57"/>
+  <circle cx="27" cy="22" r="2.5" fill="#ffbd2e"/>
+  <circle cx="34" cy="22" r="2.5" fill="#28c940"/>
+  
+  <!-- Terminal content -->
+  <rect x="18" y="28" width="20" height="2" rx="1" fill="#58a6ff"/>
+  <rect x="18" y="33" width="26" height="2" rx="1" fill="#8b949e"/>
+  <rect x="18" y="38" width="16" height="2" rx="1" fill="#8b949e"/>
+  
+  <!-- Ops/Sysadmin icon below terminal -->
+  <path d="M32 48 L24 60 H40 Z" fill="url(#text)" opacity="0.9"/>
+  <circle cx="32" cy="45" r="5" fill="url(#text)" opacity="0.9"/>
+</svg>

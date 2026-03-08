@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="300" height="80">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a73e8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d47a1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="text" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e3f2fd;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background (optional rounded rectangle) -->
+  <rect x="0" y="0" width="300" height="80" rx="12" ry="12" fill="url(#bg)" opacity="0"/>
+  
+  <!-- Icon -->
+  <circle cx="40" cy="40" r="28" fill="url(#bg)"/>
+  <path d="M40 25 L30 50 H50 Z" fill="url(#text)" opacity="0.9"/>
+  <circle cx="40" cy="23" r="6" fill="url(#text)" opacity="0.9"/>
+  
+  <!-- Text: FosCode -->
+  <text x="80" y="48" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="url(#text)">FosCode</text>
+  
+  <!-- Subtitle -->
+  <text x="82" y="65" font-family="Arial, sans-serif" font-size="12" fill="url(#text)" opacity="0.8">运维智能体 | System Operations AI</text>
+</svg>
